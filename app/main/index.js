@@ -9,11 +9,11 @@ function createWindow() {
         height: 600
     })     
 
-    // if (isDev) {
-    //     win.loadURL('http://localhost:8080')
-    // } else {
+    if (isDev) {
+        win.loadURL('http://localhost:8080')
+    } else {
         win.loadFile(path.resolve(__dirname, '../renderer/pages/main/index.html'))
-    // }
+    }
 }
 
 app.on('ready', createWindow)
