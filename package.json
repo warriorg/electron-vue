@@ -1,0 +1,20 @@
+{
+  "name": "electron-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/main/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"npm run start:render\" \"wait-on http://localhost:8080 && npm run start:main\" ",
+    "start:main": "electron .",
+    "start:render": "cd app/renderer/src/main && npm run serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "electron": "^8.0.1",
+    "electron-is-dev": "^1.1.0",
+    "wait-on": "^4.0.0"
+  }
+}
